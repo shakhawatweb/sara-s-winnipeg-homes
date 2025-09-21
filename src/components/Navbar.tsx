@@ -17,13 +17,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-background shadow-[var(--shadow-card)] sticky top-0 z-50">
+    <nav className="bg-background shadow-[var(--shadow-card)] sticky top-0 z-50 backdrop-blur-sm bg-background/95 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <div className="text-xl font-bold text-real-estate-navy">
-              Sara Buffie <span className="text-real-estate-gold">|</span> <span className="text-real-estate-text font-medium">Winnipeg Realtor</span>
+          <Link to="/" className="flex-shrink-0 group">
+            <div className="text-xl font-bold text-real-estate-navy transition-all duration-300 group-hover:scale-105">
+              Sara Buffie <span className="text-real-estate-gold transition-colors duration-300">|</span> <span className="text-real-estate-text font-medium">Winnipeg Realtor</span>
             </div>
           </Link>
 
@@ -34,10 +34,10 @@ const Navbar = () => {
                 <Link
                   key={path}
                   to={path}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                  className={`px-3 py-2 text-sm font-medium transition-all duration-300 relative link-underline ${
                     isActive(path)
                       ? 'text-real-estate-navy border-b-2 border-real-estate-gold'
-                      : 'text-real-estate-text hover:text-real-estate-navy'
+                      : 'text-real-estate-text hover:text-real-estate-navy hover:-translate-y-0.5'
                   }`}
                 >
                   {label}
@@ -49,7 +49,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link to="/listings">
-              <Button className="bg-real-estate-gold hover:bg-real-estate-gold/90 text-real-estate-navy font-semibold px-6">
+              <Button className="bg-real-estate-gold hover:bg-real-estate-gold/90 text-real-estate-navy font-semibold px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                 View Listings
               </Button>
             </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-real-estate-navy hover:text-real-estate-gold transition-colors"
+              className="text-real-estate-navy hover:text-real-estate-gold transition-all duration-300 hover:scale-110"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -68,17 +68,17 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
               {navLinks.map(({ path, label }) => (
                 <Link
                   key={path}
                   to={path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
+                  className={`block px-3 py-2 text-base font-medium transition-all duration-300 rounded-lg ${
                     isActive(path)
                       ? 'text-real-estate-navy bg-real-estate-light'
-                      : 'text-real-estate-text hover:text-real-estate-navy hover:bg-real-estate-light'
+                      : 'text-real-estate-text hover:text-real-estate-navy hover:bg-real-estate-light hover:translate-x-1'
                   }`}
                 >
                   {label}
@@ -86,7 +86,7 @@ const Navbar = () => {
               ))}
               <div className="pt-2">
                 <Link to="/listings" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="w-full bg-real-estate-gold hover:bg-real-estate-gold/90 text-real-estate-navy font-semibold">
+                  <Button className="w-full bg-real-estate-gold hover:bg-real-estate-gold/90 text-real-estate-navy font-semibold transition-all duration-300 hover:scale-[1.02]">
                     View Listings
                   </Button>
                 </Link>
