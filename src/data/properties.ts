@@ -1,3 +1,7 @@
+import property1Image from '@/assets/property-1.jpg';
+import property2Image from '@/assets/property-2.jpg';
+import property3Image from '@/assets/property-3.jpg';
+
 export interface Property {
   id: string;
   title: string;
@@ -28,7 +32,7 @@ export const properties: Property[] = [
     bedrooms: 4,
     bathrooms: 3,
     sqft: 2200,
-    image: '/src/assets/property-1.jpg',
+    image: property1Image,
     description: 'Beautiful modern family home featuring an open concept layout, updated kitchen with stainless steel appliances, hardwood floors throughout main level, and a fully finished basement. Located in the desirable River Heights neighborhood with easy access to schools, parks, and shopping.',
     features: ['Open concept layout', 'Updated kitchen', 'Hardwood floors', 'Finished basement', 'Double garage', 'Large backyard'],
     type: 'House'
@@ -41,7 +45,7 @@ export const properties: Property[] = [
     bedrooms: 5,
     bathrooms: 4,
     sqft: 2800,
-    image: '/src/assets/property-2.jpg',
+    image: property2Image,
     description: 'Stunning contemporary home in prestigious Tuxedo neighborhood. Features include soaring ceilings, gourmet kitchen with granite countertops, master suite with walk-in closet and ensuite, and professionally landscaped grounds.',
     features: ['Gourmet kitchen', 'Master ensuite', 'High ceilings', 'Premium finishes', 'Landscaped yard', 'Triple garage'],
     type: 'House'
@@ -54,7 +58,7 @@ export const properties: Property[] = [
     bedrooms: 6,
     bathrooms: 4,
     sqft: 3400,
-    image: '/src/assets/property-3.jpg',
+    image: property3Image,
     description: 'Impressive executive home offering luxury living with spacious rooms, elegant finishes, and premium location. Perfect for entertaining with formal dining room, great room with fireplace, and chef-inspired kitchen.',
     features: ['Chef kitchen', 'Great room with fireplace', 'Formal dining', 'Home office', 'Rec room', 'Premium location'],
     type: 'House'
@@ -67,7 +71,7 @@ export const properties: Property[] = [
     bedrooms: 3,
     bathrooms: 2,
     sqft: 1400,
-    image: '/src/assets/property-1.jpg',
+    image: property1Image,
     description: 'Perfect starter home in vibrant St. Boniface. Features updated flooring, modern kitchen, and a large fenced yard. Close to the Seine River and French Quarter cultural district.',
     features: ['Updated kitchen', 'Fenced yard', 'Near river', 'Cultural district', 'Move-in ready', 'Great value'],
     type: 'House'
@@ -80,7 +84,7 @@ export const properties: Property[] = [
     bedrooms: 4,
     bathrooms: 3,
     sqft: 2100,
-    image: '/src/assets/property-2.jpg',
+    image: property2Image,
     description: 'Charming heritage home with modern updates in trendy Wolseley. Original character features blend seamlessly with contemporary amenities. Walking distance to cafes, shops, and the Assiniboine River.',
     features: ['Heritage character', 'Modern updates', 'Walk to amenities', 'River nearby', 'Unique charm', 'Prime location'],
     type: 'House'
@@ -93,7 +97,7 @@ export const properties: Property[] = [
     bedrooms: 4,
     bathrooms: 3,
     sqft: 2000,
-    image: '/src/assets/property-3.jpg',
+    image: property3Image,
     description: 'Brand new construction in the growing Sage Creek community. Energy-efficient design with modern amenities, open floor plan, and builder warranty. Perfect for growing families.',
     features: ['New construction', 'Energy efficient', 'Builder warranty', 'Open floor plan', 'Growing community', 'Modern amenities'],
     type: 'House'
